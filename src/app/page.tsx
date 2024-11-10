@@ -12,12 +12,11 @@ import styles from "./page.module.scss";
 import 'swiper/css';
 
 export default function Home() {
-  const videoRef = React.useRef(null);
+  const videoRef = React.useRef<HTMLVideoElement>(null);
   const [videoState, setVideoState] = React.useState(false);
 
   function playVideo() {
     if(videoRef.current) {
-      // @ts-ignore
       videoRef.current.play();
       setVideoState(true);
     }
